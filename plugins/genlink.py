@@ -28,7 +28,7 @@ async def allowed(_, __, message):
 async def gen_link_s(bot, message):
     vj = await bot.ask(chat_id = message.from_user.id, text = "Now Send Me Your Message Which You Want To Store.")
     file_type = vj.media
-    if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT]:
+    if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT,enums.MessageMediaType.IMAGE,enums.MessageMediaType.TEXT]:
         return await vj.reply("Send me only video,audio,file or document.")
     if message.has_protected_content and message.chat.id not in ADMINS:
         return await message.reply("okDa")
@@ -42,10 +42,10 @@ async def gen_link_s(bot, message):
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
 async def gen_link_batch(bot, message):
     if " " not in message.text:
-        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/VJ_Botz/10 https://t.me/VJ_Botz/20</code>.")
+        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/VJ_Botz/10 https://t.me/q3g3rjwe/20</code>.")
     links = message.text.strip().split(" ")
     if len(links) != 3:
-        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/VJ_Botz/10 https://t.me/VJ_Botz/20</code>.")
+        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/VJ_Botz/10 https://t.me/uwyegfj/20</code>.")
     cmd, first, last = links
     regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
     match = regex.match(first)
