@@ -8,6 +8,7 @@ requests
 bs4 
 git+https://github.com/Joelkb/cinemagoer 
 shortzy 
+pyshorteners
 datetime 
 pytz 
 aiohttp
