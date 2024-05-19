@@ -11,7 +11,7 @@ import random
 from Tech_VJ.vars import Var
 from pyshorteners import Shortener
 
-@Client.on_message(filters.private & filters.command("stream"))
+@Client.on_message(filters.private & filters.command("stream")& (filters.user(list(Var.OWNER_ID)))
 async def stream_start(client, message):
     if STREAM_MODE == False:
         return 
