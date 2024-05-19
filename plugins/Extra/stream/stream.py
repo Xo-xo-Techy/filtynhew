@@ -10,6 +10,7 @@ import random
 # fligher
 from TechVJ.util.vars import Var
 from pyshorteners import Shortener
+from TechVJ.util.shortner import get_shortlink
 
 
 # for admins only by @fligher
