@@ -7,7 +7,7 @@ from TechVJ.util.human_readable import humanbytes
 import humanize
 import random
 
-fligher
+# fligher
 from TechVJ.util.vars import Var
 from pyshorteners import Shortener
 
