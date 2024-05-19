@@ -8,7 +8,7 @@ import humanize
 import random
 
 #fligher
-from Tech_VJ.vars import Var
+from TechVJ.vars import Var
 from pyshorteners import Shortener
 
 @Client.on_message(filters.private & filters.command("stream") & filters.user(list(Var.OWNER_ID)))
