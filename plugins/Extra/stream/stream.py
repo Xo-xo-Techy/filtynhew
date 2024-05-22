@@ -17,7 +17,7 @@ from TechVJ.util.shortner import get_shortlink
 @Client.on_message(filters.command("stream") & filters.user(ADMINS))
 async def stream_start(client, message):
     if STREAM_MODE == False:
-        return 
+        return await client.ask(message.chat.id, "**stream mod is temporarliy stopped🛑🛑🛑**")
     msg = await client.ask(message.chat.id, "**Now send me your file/video to get stream and download link**")
     if not msg.media:
         return await message.reply("**Please send me supported media.**")
@@ -64,7 +64,7 @@ async def stream_start(client, message):
 @Client.on_message(filters.private & filters.command("stream"))
 async def streams_start(client, message):
     if STREAM_MODE == False:
-        return 
+        return await client.ask(message.chat.id, "**stream mod is temporarliy stopped🛑🛑🛑**")
     msg = await client.ask(message.chat.id, "**Now send me your file/video to get stream and download link**")
     if not msg.media:
         return await message.reply("**Please send me supported media.**")
