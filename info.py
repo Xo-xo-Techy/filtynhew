@@ -73,8 +73,8 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TRUMBOTCHAT') # Support Chat Link Wi
 
 # True Or False
 PM_SEARCH = bool(environ.get('PM_SEARCH', True)) # In Pm Search Currently Spell Check Doesn't Work.
-SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
-VERIFY = bool(environ.get('VERIFY', False))
+SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', False))
+VERIFY = bool(environ.get('VERIFY', True))
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
