@@ -12,6 +12,7 @@ pyshorteners
 datetime 
 pytz 
 aiohttp
+pyrogram
 
 #---master---# 
 #Telethroid==0.0.10 
